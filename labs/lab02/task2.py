@@ -33,8 +33,8 @@ def load_edr_logs(filepath: str) -> list:
         with open(filepath, "r", encoding="utf-8") as f:
             return json.load(f)
     except FileNotFoundError:
-        logging.error("Помилка! Файл не знайдено.") # noqa: LOG015
-        return []  
+        logging.error("Помилка! Файл не знайдено.")  # noqa: LOG015
+        return []
     except PermissionError:
         logging.error("Помилка! Немає доступу до файлу.")  # noqa: LOG015
         return []
